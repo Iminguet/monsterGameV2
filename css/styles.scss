@@ -45,7 +45,7 @@
 
 .toSection {
   padding: 1em;
-  width: 5em;
+  width: 10em;
   background-color: black;
   color: white;
   border: 2px dotted gold;
@@ -55,4 +55,13 @@
 .size {
   width: 100%;
   height: 99vh;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid white;
+  height: 100vh;
 }
