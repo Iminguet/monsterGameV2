@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60.986778mm"
+   height="18.18453mm"
+   viewBox="0 0 60.986778 18.18453"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="logoProv.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.1625"
+     inkscape:cx="142.19653"
+     inkscape:cy="40.231214"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="168.78613"
+       y="233.06358"
+       width="111.90751"
+       height="100.80925"
+       id="rect38826" />
+    <rect
+       x="38.843929"
+       y="292.25433"
+       width="403.237"
+       height="199.76878"
+       id="rect33400" />
+    <rect
+       x="40.693642"
+       y="223.81503"
+       width="961.84973"
+       height="329.24854"
+       id="rect30248" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.03378205,-61.045884)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.27624309,-11.623314,-2.8845041)"
+       id="text30246"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect30248);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="40.693359"
+         y="260.20946"
+         id="tspan41689">Monster</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.27247956,-10.88921,-10.472146)"
+       id="text33398"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect33400);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="38.84375"
+         y="328.64891"
+         id="tspan41691">Game</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.36059838,0,0,0.60561142,-19.142331,-84.402913)"
+       id="text38824"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect38826);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="168.78516"
+         y="269.45946"
+         id="tspan41693">V.2</tspan></text>
+  </g>
+</svg>
