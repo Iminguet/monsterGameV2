@@ -10,7 +10,8 @@
   </head>
   <body>
     <main>
-      <div id="mainMenu" class="size">
+      <!-- QUITAR LA CLASE VISIVILITYOFF Y DEVOLVERLA A CHARACTER -->
+      <div id="mainMenu" class="size visibilityOFF">
         <div class="containerItems">
           <div class="mainItemContainer">
             <img src="./img/logoProv.svg" alt="monster game logo" />
@@ -35,7 +36,7 @@
       </div>
       <div id="credits" class="size visibilityOFF">
         <div class="containerItems">
-          <div class="mainItemContainer">
+          <div class="mainItemContainer scrollText">
             <h1>Lorem, CREDIS.</h1>
             <h2>Lorem ipsum dolor sit amet consectetur.</h2>
             <p>
@@ -60,7 +61,7 @@
       </div>
       <div id="instructions" class="size visibilityOFF">
         <div class="containerItems">
-          <div class="mainItemContainer">
+          <div class="mainItemContainer scrollText">
             <h1>Lorem, ipsum.</h1>
             <h2>Lorem ipsum dolor sit amet consectetur.</h2>
             <p>
@@ -93,13 +94,27 @@
           <div class="toSection" onclick="goSection('mainMenu')">Back</div>
         </div>
       </div>
-      <div id="character" class="size visibilityOFF">
+      <div id="character" class="size">
         <div class="containerItems">
           <div class="mainItemContainer">
-            <div class="character"></div>
-            <p>Lorem, ipsum.</p>
-            <div class="character"></div>
-            <p>Lorem, ipsum.</p>
+            <div class="charactersSelection">
+              <h1>Choose your warrior</h1>
+              <div class="characterContainer">
+                <div class="character"></div>
+                <div class="character"></div>
+              </div>
+              <h1>Name your champ</h1>
+              <input type="text" name="warriorId" id="warriorId" />
+            </div>
+
+            <div class="skillsContainer">
+              <div class="skills"></div>
+              <div class="skills"></div>
+              <div class="skills"></div>
+              <div class="skills"></div>
+              <div class="skills"></div>
+              <div class="skills"></div>
+            </div>
           </div>
           <div class="toSection" onclick="goSection('mainGame')">Start</div>
           <div class="toSection" onclick="goSection('mainMenu')">Back</div>
