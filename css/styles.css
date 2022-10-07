@@ -25,7 +25,7 @@
 }
 
 #mainGame {
-  background-color: black;
+  background: url(../img/155Z_2107.w015.n001.496A.p30.496.jpg) center center/cover no-repeat fixed;
   color: white;
 }
 
@@ -78,6 +78,53 @@
   background-color: red;
   height: 60%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#character .containerItems .mainItemContainer .skillsContainer .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid green;
+  height: 100%;
+  width: 13%;
+}
+#character .containerItems .mainItemContainer .skillsContainer .skills .skillsImage {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#character .containerItems .mainItemContainer .skillsContainer .skills .skillsImage img {
+  width: 100%;
+  height: auto;
+}
+#character .containerItems .mainItemContainer .skillsContainer .skills p {
+  height: 30%;
+  width: 95%;
+  text-align: center;
 }
 
 .visibilityON {

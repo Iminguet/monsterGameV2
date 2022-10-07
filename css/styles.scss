@@ -23,7 +23,8 @@
 }
 
 #mainGame {
-  background-color: black;
+  background: url(../img/155Z_2107.w015.n001.496A.p30.496.jpg) center
+    center/cover no-repeat fixed;
   color: white;
 }
 #character {
@@ -55,16 +56,46 @@
             }
           }
         }
+        input {
+        }
       }
 
       .skillsContainer {
         background-color: red;
         height: 60%;
         width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .skills {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid green;
+          height: 100%;
+          width: 13%;
+          .skillsImage {
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          p {
+            height: 30%;
+            width: 95%;
+            text-align: center;
+          }
+        }
       }
     }
   }
 }
+
 .visibilityON {
   display: block;
 }
