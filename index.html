@@ -10,7 +10,7 @@
   </head>
   <body>
     <main>
-      <!-- QUITAR LA CLASE VISIVILITYOFF Y DEVOLVERLA A CHARACTER -->
+      <!-- QUITAR LA CLASE VISIVILITYOFF Y DEVOLVERLA A MAINGAME -->
       <div id="mainMenu" class="size visibilityOFF">
         <div class="containerItems">
           <div class="mainItemContainer">
@@ -94,7 +94,7 @@
           <div class="toSection" onclick="goSection('mainMenu')">Back</div>
         </div>
       </div>
-      <div id="character" class="size">
+      <div id="character" class="size visibilityOFF">
         <div class="containerItems">
           <div class="mainItemContainer">
             <div class="charactersSelection">
@@ -122,7 +122,7 @@
               <h1>Enter name</h1>
               <input type="text" name="warriorId" id="warriorId" />
             </div>
-
+            <h1>Select one skill</h1>
             <div class="skillsContainer">
               <div class="skills">
                 <div class="skillsImage">
@@ -184,11 +184,30 @@
           <div class="toSection" onclick="goSection('mainMenu')">Back</div>
         </div>
       </div>
-      <div id="mainGame" class="size visibilityOFF">
+      <div id="mainGame" class="size">
         <div class="containerItems">
-          <p>MAIN GAME</p>
-          <h1>aqui todo el juego</h1>
-          <div class="toSection" onclick="goSection('mainMenu')">Back</div>
+          <div class="infoContainer">
+            <div class="playerInfo cardSize"></div>
+            <div class="player cardSize">
+              <div class="playerPicture"></div>
+              <div class="weapons"></div>
+            </div>
+            <div class="playerActions cardSize">
+              <div id="attack"></div>
+              <div id="health"></div>
+            </div>
+          </div>
+          <div class="infoContainer infoButton">
+            <div class="toSection" onclick="goSection('mainMenu')">Back</div>
+          </div>
+          <div class="infoContainer">
+            <div class="monsterInfo cardSize"></div>
+            <div class="monster cardSize">
+              <div class="weapons"></div>
+              <div class="monsterPicture"></div>
+            </div>
+            <div class="monsterActions cardSize"></div>
+          </div>
         </div>
       </div>
     </main>

@@ -8,6 +8,56 @@
   font-size: 16px;
 }
 
+.size {
+  width: 100%;
+  height: 100vh;
+}
+.size .containerItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid blue;
+  height: 100vh;
+}
+.size .containerItems .mainItemContainer {
+  border: 2px dotted blue;
+  margin-top: 2em;
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.size .containerItems .toSection {
+  padding: 1em;
+  width: 10em;
+  margin: 0.5em;
+  background-color: black;
+  color: white;
+  border: 2px dotted gold;
+  text-align: center;
+}
+
 #mainMenu {
   background-color: red;
 }
@@ -26,6 +76,58 @@
 
 #mainGame {
   color: white;
+}
+#mainGame .containerItems {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: red;
+}
+#mainGame .containerItems .infoContainer {
+  width: 33.33%;
+  height: 100%;
+  border: 1px solid blue;
+}
+#mainGame .containerItems .cardSize {
+  width: 100%;
+  height: 33.33%;
+  gap: 1em;
+}
+#mainGame .containerItems .playerInfo {
+  background-color: blue;
+}
+#mainGame .containerItems .player {
+  background-color: black;
+}
+#mainGame .containerItems .playerActions {
+  background-color: green;
+}
+#mainGame .containerItems .monsterInfo {
+  background-color: yellow;
+}
+#mainGame .containerItems .monster {
+  background-color: purple;
+}
+#mainGame .containerItems .monsterActions {
+  background-color: orange;
+}
+#mainGame .containerItems .infoButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #character {
@@ -138,54 +240,4 @@
   width: 3em;
   height: 3em;
   background-color: aquamarine;
-}
-
-.size {
-  width: 100%;
-  height: 100vh;
-}
-.size .containerItems {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border: 2px solid blue;
-  height: 100vh;
-}
-.size .containerItems .mainItemContainer {
-  border: 2px dotted blue;
-  margin-top: 2em;
-  width: 70%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.size .containerItems .toSection {
-  padding: 1em;
-  width: 10em;
-  margin: 0.5em;
-  background-color: black;
-  color: white;
-  border: 2px dotted gold;
-  text-align: center;
 }
