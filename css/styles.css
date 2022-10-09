@@ -98,13 +98,53 @@
 #mainGame .containerItems .cardSize {
   width: 100%;
   height: 33.33%;
-  gap: 1em;
+}
+#mainGame .containerItems .cardSize .weapons,
+#mainGame .containerItems .cardSize .playerPicture,
+#mainGame .containerItems .cardSize .monsterPicture {
+  width: 50%;
+  height: 100%;
+}
+#mainGame .containerItems .cardSize .weapons {
+  background-color: yellowgreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em;
+}
+#mainGame .containerItems .cardSize .weapons > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  height: 30%;
 }
 #mainGame .containerItems .playerInfo {
   background-color: blue;
 }
 #mainGame .containerItems .player {
   background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#mainGame .containerItems .player .weapons {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 #mainGame .containerItems .playerActions {
   background-color: green;
@@ -114,6 +154,14 @@
 }
 #mainGame .containerItems .monster {
   background-color: purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#mainGame .containerItems .monster .weapons {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 #mainGame .containerItems .monsterActions {
   background-color: orange;

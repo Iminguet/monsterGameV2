@@ -80,13 +80,40 @@
     .cardSize {
       width: 100%;
       height: 33.33%;
-      gap: 1em;
+
+      .weapons,
+      .playerPicture,
+      .monsterPicture {
+        width: 50%;
+        height: 100%;
+      }
+
+      .weapons {
+        background-color: yellowgreen;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.5em;
+      }
+      .weapons > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 30%;
+      }
     }
+
     .playerInfo {
       background-color: blue;
     }
+
     .player {
       background-color: black;
+      display: flex;
+      .weapons {
+        align-items: flex-start;
+      }
     }
     .playerActions {
       background-color: green;
@@ -97,6 +124,11 @@
     }
     .monster {
       background-color: purple;
+      display: flex;
+
+      .weapons {
+        align-items: flex-end;
+      }
     }
     .monsterActions {
       background-color: orange;
