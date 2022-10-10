@@ -81,14 +81,15 @@
       width: 100%;
       height: 33.33%;
 
-      .weapons,
       .playerPicture,
       .monsterPicture {
-        width: 50%;
+        width: 70%;
         height: 100%;
       }
 
       .weapons {
+        width: 30%;
+        height: 100%;
         background-color: yellowgreen;
         display: flex;
         flex-direction: column;
@@ -96,16 +97,32 @@
         padding: 0.5em;
       }
       .weapons > div {
+        border: 2px dotted red;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30%;
-        height: 30%;
+        width: 50%;
+        height: auto;
       }
     }
 
     .playerInfo {
       background-color: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .name,
+      .damage,
+      .armour {
+        display: flex;
+        padding: 0.5em;
+        h1 {
+        }
+        p {
+          border: 2px solid black;
+        }
+      }
     }
 
     .player {
@@ -113,10 +130,38 @@
       display: flex;
       .weapons {
         align-items: flex-start;
+        .selectedWeapon {
+          align-self: flex-end;
+        }
       }
     }
     .playerActions {
       background-color: green;
+      display: flex;
+      color: black;
+      #attack {
+        background-color: aqua;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #health {
+        background-color: bisque;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        #remainingPotions {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40%;
+          height: 40%;
+          border: 1px solid green;
+          font-size: 400%;
+        }
+      }
     }
 
     .monsterInfo {
@@ -128,6 +173,9 @@
 
       .weapons {
         align-items: flex-end;
+        .selectedWeapon {
+          align-self: flex-start;
+        }
       }
     }
     .monsterActions {
