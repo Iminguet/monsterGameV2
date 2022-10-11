@@ -10,7 +10,7 @@
   </head>
   <body>
     <main>
-      <!-- QUITAR LA CLASE VISIVILITYOFF Y DEVOLVERLA A MAINGAME -->
+      <!-- QUITAR LA CLASE VISIVILITY OFF Y DEVOLVERLA A MAINGAME -->
       <div id="mainMenu" class="size visibilityOFF">
         <div class="containerItems">
           <div class="mainItemContainer">
@@ -186,6 +186,11 @@
       </div>
       <div id="mainGame" class="size">
         <div class="containerItems">
+          <div class="salud">
+            <div class="charactersLife"><div id="playerLife"></div></div>
+            <div class="lifeDivisor"></div>
+            <div class="charactersLife"><div id="monsterLife"></div></div>
+          </div>
           <div class="infoContainer">
             <div class="playerInfo cardSize">
               <div class="name">
@@ -194,11 +199,11 @@
               </div>
               <div class="damage">
                 <h1>Damage:</h1>
-                <p id="playerDamage">87</p>
+                <p id="playerDamage"></p>
               </div>
               <div class="armour">
                 <h1>Armour:</h1>
-                <p id="playerArmour">25</p>
+                <p id="playerArmour"></p>
               </div>
             </div>
             <div class="player cardSize">
@@ -237,7 +242,20 @@
             <div class="toSection" onclick="goSection('mainMenu')">Back</div>
           </div>
           <div class="infoContainer">
-            <div class="monsterInfo cardSize"></div>
+            <div class="monsterInfo cardSize">
+              <div class="name">
+                <h1>Name:</h1>
+                <p id="monsterName">Furtivo Pigmeo</p>
+              </div>
+              <div class="damage">
+                <h1>Damage:</h1>
+                <p id="monsterDamage"></p>
+              </div>
+              <div class="armour">
+                <h1>Armour:</h1>
+                <p id="monsterArmour"></p>
+              </div>
+            </div>
             <div class="monster cardSize">
               <div class="weapons">
                 <div id="monsterStrongAttac">

@@ -90,6 +90,58 @@
           flex-direction: row;
   background-color: red;
 }
+#mainGame .containerItems .salud {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 3em;
+  background-color: cadetblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mainGame .containerItems .salud .lifeDivisor {
+  background-color: blue;
+  z-index: 1;
+  width: 3%;
+  height: 100%;
+}
+#mainGame .containerItems .salud .charactersLife {
+  width: 50%;
+  height: 100%;
+  border: 5px solid grey;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#mainGame .containerItems .salud .charactersLife #playerLife,
+#mainGame .containerItems .salud .charactersLife #monsterLife {
+  width: 100%;
+  height: 100%;
+}
+#mainGame .containerItems .salud .charactersLife #playerLife {
+  width: 80%;
+  background-color: green;
+}
+#mainGame .containerItems .salud .charactersLife #monsterLife {
+  width: 90%;
+  background-color: green;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
 #mainGame .containerItems .infoContainer {
   width: 33.33%;
   height: 100%;
@@ -134,7 +186,8 @@
   width: 50%;
   height: auto;
 }
-#mainGame .containerItems .playerInfo {
+#mainGame .containerItems .playerInfo,
+#mainGame .containerItems .monsterInfo {
   background-color: blue;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,15 +205,29 @@
 }
 #mainGame .containerItems .playerInfo .name,
 #mainGame .containerItems .playerInfo .damage,
-#mainGame .containerItems .playerInfo .armour {
+#mainGame .containerItems .playerInfo .armour,
+#mainGame .containerItems .monsterInfo .name,
+#mainGame .containerItems .monsterInfo .damage,
+#mainGame .containerItems .monsterInfo .armour {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0.5em;
 }
+#mainGame .containerItems .playerInfo .name h1,
+#mainGame .containerItems .playerInfo .damage h1,
+#mainGame .containerItems .playerInfo .armour h1,
+#mainGame .containerItems .monsterInfo .name h1,
+#mainGame .containerItems .monsterInfo .damage h1,
+#mainGame .containerItems .monsterInfo .armour h1 {
+  color: white;
+}
 #mainGame .containerItems .playerInfo .name p,
 #mainGame .containerItems .playerInfo .damage p,
-#mainGame .containerItems .playerInfo .armour p {
+#mainGame .containerItems .playerInfo .armour p,
+#mainGame .containerItems .monsterInfo .name p,
+#mainGame .containerItems .monsterInfo .damage p,
+#mainGame .containerItems .monsterInfo .armour p {
   border: 2px solid black;
 }
 #mainGame .containerItems .player {
@@ -227,7 +294,7 @@
   font-size: 400%;
 }
 #mainGame .containerItems .monsterInfo {
-  background-color: yellow;
+  background-color: cadetblue;
 }
 #mainGame .containerItems .monster {
   background-color: purple;

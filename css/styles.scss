@@ -70,7 +70,46 @@
     align-items: center;
     flex-direction: row;
     background-color: red;
+    .salud {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 3em;
+      background-color: cadetblue;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .lifeDivisor {
+        background-color: blue;
+        z-index: 1;
+        width: 3%;
+        height: 100%;
+      }
+      .charactersLife {
+        width: 50%;
+        height: 100%;
+        border: 5px solid grey;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        #playerLife,
+        #monsterLife {
+          width: 100%;
+          height: 100%;
+        }
 
+        #playerLife {
+          width: 80%;
+          background-color: green;
+        }
+        #monsterLife {
+          width: 90%;
+          background-color: green;
+          align-self: flex-end;
+        }
+      }
+    }
     .infoContainer {
       width: 33.33%;
       height: 100%;
@@ -106,7 +145,8 @@
       }
     }
 
-    .playerInfo {
+    .playerInfo,
+    .monsterInfo {
       background-color: blue;
       display: flex;
       justify-content: center;
@@ -118,6 +158,7 @@
         display: flex;
         padding: 0.5em;
         h1 {
+          color: white;
         }
         p {
           border: 2px solid black;
@@ -165,7 +206,7 @@
     }
 
     .monsterInfo {
-      background-color: yellow;
+      background-color: cadetblue;
     }
     .monster {
       background-color: purple;
