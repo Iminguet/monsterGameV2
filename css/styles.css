@@ -198,37 +198,94 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#mainGame .containerItems .playerInfo .perks,
+#mainGame .containerItems .monsterInfo .perks {
+  width: 50%;
+  height: 100%;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#mainGame .containerItems .playerInfo .perks #mainGamePlayerPerk,
+#mainGame .containerItems .playerInfo .perks #mainGameMonsterPerk,
+#mainGame .containerItems .monsterInfo .perks #mainGamePlayerPerk,
+#mainGame .containerItems .monsterInfo .perks #mainGameMonsterPerk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mainGame .containerItems .playerInfo .perks #mainGamePlayerPerk img,
+#mainGame .containerItems .playerInfo .perks #mainGameMonsterPerk img,
+#mainGame .containerItems .monsterInfo .perks #mainGamePlayerPerk img,
+#mainGame .containerItems .monsterInfo .perks #mainGameMonsterPerk img {
+  margin-top: 3em;
+  width: 40%;
+}
+#mainGame .containerItems .playerInfo .info,
+#mainGame .containerItems .monsterInfo .info {
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-#mainGame .containerItems .playerInfo .name,
-#mainGame .containerItems .playerInfo .damage,
-#mainGame .containerItems .playerInfo .armour,
-#mainGame .containerItems .monsterInfo .name,
-#mainGame .containerItems .monsterInfo .damage,
-#mainGame .containerItems .monsterInfo .armour {
+#mainGame .containerItems .playerInfo .info .name,
+#mainGame .containerItems .monsterInfo .info .name {
+  margin-top: 3em;
+}
+#mainGame .containerItems .playerInfo .info .name,
+#mainGame .containerItems .playerInfo .info .damage,
+#mainGame .containerItems .playerInfo .info .armour,
+#mainGame .containerItems .monsterInfo .info .name,
+#mainGame .containerItems .monsterInfo .info .damage,
+#mainGame .containerItems .monsterInfo .info .armour {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0.5em;
+  width: 100%;
+  border: 1px solid black;
 }
-#mainGame .containerItems .playerInfo .name h1,
-#mainGame .containerItems .playerInfo .damage h1,
-#mainGame .containerItems .playerInfo .armour h1,
-#mainGame .containerItems .monsterInfo .name h1,
-#mainGame .containerItems .monsterInfo .damage h1,
-#mainGame .containerItems .monsterInfo .armour h1 {
+#mainGame .containerItems .playerInfo .info .name h1,
+#mainGame .containerItems .playerInfo .info .damage h1,
+#mainGame .containerItems .playerInfo .info .armour h1,
+#mainGame .containerItems .monsterInfo .info .name h1,
+#mainGame .containerItems .monsterInfo .info .damage h1,
+#mainGame .containerItems .monsterInfo .info .armour h1 {
   color: white;
 }
-#mainGame .containerItems .playerInfo .name p,
-#mainGame .containerItems .playerInfo .damage p,
-#mainGame .containerItems .playerInfo .armour p,
-#mainGame .containerItems .monsterInfo .name p,
-#mainGame .containerItems .monsterInfo .damage p,
-#mainGame .containerItems .monsterInfo .armour p {
+#mainGame .containerItems .playerInfo .info .name p,
+#mainGame .containerItems .playerInfo .info .damage p,
+#mainGame .containerItems .playerInfo .info .armour p,
+#mainGame .containerItems .monsterInfo .info .name p,
+#mainGame .containerItems .monsterInfo .info .damage p,
+#mainGame .containerItems .monsterInfo .info .armour p {
   border: 2px solid black;
+}
+#mainGame .containerItems .monsterInfo {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 #mainGame .containerItems .player {
   background-color: black;

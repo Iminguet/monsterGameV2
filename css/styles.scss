@@ -151,19 +151,53 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      .name,
-      .damage,
-      .armour {
+      flex-direction: row;
+      .perks {
+        width: 50%;
+        height: 100%;
+        background-color: green;
         display: flex;
-        padding: 0.5em;
-        h1 {
-          color: white;
-        }
-        p {
-          border: 2px solid black;
+
+        #mainGamePlayerPerk,
+        #mainGameMonsterPerk {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          img {
+            margin-top: 3em;
+            width: 40%;
+          }
         }
       }
+      .info {
+        width: 50%;
+        height: 100%;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+
+        flex-direction: column;
+        .name {
+          margin-top: 3em;
+        }
+        .name,
+        .damage,
+        .armour {
+          display: flex;
+          padding: 0.5em;
+          width: 100%;
+          border: 1px solid black;
+          h1 {
+            color: white;
+          }
+          p {
+            border: 2px solid black;
+          }
+        }
+      }
+    }
+    .monsterInfo {
+      flex-direction: row-reverse;
     }
 
     .player {
