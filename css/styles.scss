@@ -124,6 +124,12 @@
       .monsterPicture {
         width: 70%;
         height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 75%;
+        }
       }
 
       .weapons {
@@ -196,9 +202,6 @@
         }
       }
     }
-    .monsterInfo {
-      flex-direction: row-reverse;
-    }
 
     .player {
       background-color: black;
@@ -241,6 +244,7 @@
 
     .monsterInfo {
       background-color: cadetblue;
+      flex-direction: row-reverse;
     }
     .monster {
       background-color: purple;
@@ -255,11 +259,73 @@
     }
     .monsterActions {
       background-color: orange;
-    }
-    .infoButton {
       display: flex;
       justify-content: center;
-      align-items: flex-end;
+      align-items: center;
+
+      .nextMonstersInfo {
+        width: 90%;
+        height: 90%;
+        background-color: blue;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .nextMonster {
+          width: 33%;
+          height: 100%;
+          background-color: red;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .nextMonsterPic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: 50%;
+            background-color: green;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .nextMonsterPerks {
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 50%;
+            img {
+              width: 50%;
+              height: 50%;
+            }
+          }
+        }
+      }
+    }
+
+    .centerContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .showActionsContainer {
+        width: 100%;
+        height: 80%;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        #showActions {
+          width: 90%;
+          height: 80%;
+          background-color: blue;
+        }
+      }
     }
   }
 }

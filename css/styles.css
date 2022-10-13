@@ -155,6 +155,19 @@
 #mainGame .containerItems .cardSize .monsterPicture {
   width: 70%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mainGame .containerItems .cardSize .playerPicture img,
+#mainGame .containerItems .cardSize .monsterPicture img {
+  height: 75%;
 }
 #mainGame .containerItems .cardSize .weapons {
   width: 30%;
@@ -281,12 +294,6 @@
 #mainGame .containerItems .monsterInfo .info .armour p {
   border: 2px solid black;
 }
-#mainGame .containerItems .monsterInfo {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
 #mainGame .containerItems .player {
   background-color: black;
   display: -webkit-box;
@@ -352,6 +359,10 @@
 }
 #mainGame .containerItems .monsterInfo {
   background-color: cadetblue;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 #mainGame .containerItems .monster {
   background-color: purple;
@@ -370,8 +381,106 @@
 }
 #mainGame .containerItems .monsterActions {
   background-color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-#mainGame .containerItems .infoButton {
+#mainGame .containerItems .monsterActions .nextMonstersInfo {
+  width: 90%;
+  height: 90%;
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mainGame .containerItems .monsterActions .nextMonstersInfo .nextMonster {
+  width: 33%;
+  height: 100%;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mainGame .containerItems .monsterActions .nextMonstersInfo .nextMonster .nextMonsterPic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 50%;
+  background-color: green;
+}
+#mainGame .containerItems .monsterActions .nextMonstersInfo .nextMonster .nextMonsterPic img {
+  width: 100%;
+  height: 100%;
+}
+#mainGame .containerItems .monsterActions .nextMonstersInfo .nextMonster .nextMonsterPerks {
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 50%;
+}
+#mainGame .containerItems .monsterActions .nextMonstersInfo .nextMonster .nextMonsterPerks img {
+  width: 50%;
+  height: 50%;
+}
+#mainGame .containerItems .centerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mainGame .containerItems .centerContainer .showActionsContainer {
+  width: 100%;
+  height: 80%;
+  background-color: green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,6 +490,11 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+#mainGame .containerItems .centerContainer .showActionsContainer #showActions {
+  width: 90%;
+  height: 80%;
+  background-color: blue;
 }
 
 #character {
