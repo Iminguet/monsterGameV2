@@ -133,11 +133,11 @@
   height: 100%;
 }
 #mainGame .containerItems .salud .charactersLife #playerLife {
-  width: 80%;
+  width: 100%;
   background-color: green;
 }
 #mainGame .containerItems .salud .charactersLife #monsterLife {
-  width: 90%;
+  width: 100%;
   background-color: green;
   -ms-flex-item-align: end;
       align-self: flex-end;
