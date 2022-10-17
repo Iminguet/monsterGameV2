@@ -26,15 +26,19 @@ class Hero {
       (this.life = 100);
   }
 
-  ataque_basico(enemigo) {
-    enemigo.life -= parseInt(
-      this.fuerza / this.suerte - enemigo.velocidad / enemigo.peso
+  ligthAttack(enemy) {
+    enemy.life -= parseInt(
+      Math.random() * (10 - this.minimunDamage) + this.minimunDamage
     );
   }
-
-  ataque_fuerte(enemigo) {
-    enemigo.life -= parseInt(
-      this.fuerza + this.suerte - enemigo.velocidad / enemigo.peso
+  normalAttack(enemy) {
+    enemy.life -= parseInt(
+      Math.random() * (15 - this.minimunDamage) + this.minimunDamage
+    );
+  }
+  strongAttack(enemy) {
+    enemy.life -= parseInt(
+      Math.random() * (25 - this.minimunDamage) + this.minimunDamage
     );
   }
 
