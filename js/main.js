@@ -28,17 +28,20 @@ class Hero {
 
   ligthAttack(enemy) {
     enemy.life -= parseInt(
-      Math.random() * (10 - this.minimunDamage) + this.minimunDamage
+      Math.random() * (this.minimunDamage + 10 - this.minimunDamage) +
+        this.minimunDamage
     );
   }
   normalAttack(enemy) {
     enemy.life -= parseInt(
-      Math.random() * (15 - this.minimunDamage) + this.minimunDamage
+      Math.random() * (this.minimunDamage + 15 - this.minimunDamage) +
+        this.minimunDamage
     );
   }
   strongAttack(enemy) {
     enemy.life -= parseInt(
-      Math.random() * (25 - this.minimunDamage) + this.minimunDamage
+      Math.random() * (this.minimunDamage + 25 - this.minimunDamage) +
+        this.minimunDamage
     );
   }
 
@@ -69,6 +72,7 @@ function restarSalud() {
   hero.life -= 10;
   let heroSalud = `${hero.life}%`;
   playerLife.style.width = heroSalud;
+  monsterLife.style.width = heroSalud;
 }
 
 setTimeout(restarSalud, 3000);
