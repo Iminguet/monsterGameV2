@@ -44,8 +44,6 @@ class Hero {
         this.minimunDamage
     );
   }
-
-  defensa() {}
 }
 
 const playerLife = document.getElementById('playerLife');
@@ -80,3 +78,7 @@ setTimeout(restarSalud, 6000);
 setTimeout(restarSalud, 9000);
 setTimeout(restarSalud, 12000);
 setTimeout(restarSalud, 15000);
+
+// getting skills
+
+const getSkill = (id) => {};
