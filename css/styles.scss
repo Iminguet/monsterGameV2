@@ -1,3 +1,5 @@
+$backGround: rgb(88, 39, 39);
+
 * {
   margin: 0;
   padding: 0;
@@ -46,19 +48,11 @@
   }
 }
 
-#mainMenu {
-  background-color: red;
-}
-
-#exit {
-  background-color: green;
-}
-
-#credits {
-  background-color: blue;
-}
+#mainMenu,
+#exit,
+#credits,
 #instructions {
-  background-color: orange;
+  background-color: $backGround;
 }
 
 #mainGame {
@@ -330,7 +324,7 @@
   }
 }
 #character {
-  background-color: rgb(248, 198, 248);
+  background-color: whitesmoke;
   .containerItems {
     .mainItemContainer {
       justify-content: space-around;
@@ -363,7 +357,7 @@
       }
 
       .skillsContainer {
-        background-color: red;
+        background-color: whitesmoke;
         height: 60%;
         width: 100%;
         display: flex;

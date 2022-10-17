@@ -58,20 +58,11 @@
   text-align: center;
 }
 
-#mainMenu {
-  background-color: red;
-}
-
-#exit {
-  background-color: green;
-}
-
-#credits {
-  background-color: blue;
-}
-
+#mainMenu,
+#exit,
+#credits,
 #instructions {
-  background-color: orange;
+  background-color: rgb(88, 39, 39);
 }
 
 #mainGame {
@@ -498,7 +489,7 @@
 }
 
 #character {
-  background-color: rgb(248, 198, 248);
+  background-color: whitesmoke;
 }
 #character .containerItems .mainItemContainer {
   -ms-flex-pack: distribute;
@@ -543,7 +534,7 @@
   height: 100%;
 }
 #character .containerItems .mainItemContainer .skillsContainer {
-  background-color: red;
+  background-color: whitesmoke;
   height: 60%;
   width: 100%;
   display: -webkit-box;
