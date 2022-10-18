@@ -100,19 +100,31 @@
             <div class="charactersSelection">
               <h1>Choose your warrior</h1>
               <div class="characterContainer">
-                <div class="character" id="barbarian">
+                <div
+                  class="character"
+                  onclick="getAvatar('barbarian')"
+                  id="barbarian"
+                >
                   <img
                     src="./img/characters/barbarian-stand.svg"
                     alt="Barbarian standart"
                   />
                 </div>
-                <div class="character" id="womanElf">
+                <div
+                  class="character"
+                  onclick="getAvatar('womanElf')"
+                  id="womanElf"
+                >
                   <img
                     src="./img/characters/woman-elf-stand.svg"
                     alt="woman elf standart"
                   />
                 </div>
-                <div class="character" id="barbute">
+                <div
+                  class="character"
+                  onclick="getAvatar('barbute')"
+                  id="barbute"
+                >
                   <img
                     src="./img/characters/barbute-stand.svg"
                     alt="barbute standart"
@@ -180,7 +192,7 @@
               </div>
             </div>
           </div>
-          <div class="toSection" onclick="goSection('mainGame')" id="start">
+          <div class="toSection" onclick="startGame('mainGame')" id="start">
             Start
           </div>
           <div class="toSection" onclick="goSection('mainMenu')">Back</div>
