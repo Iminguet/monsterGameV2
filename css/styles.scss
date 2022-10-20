@@ -120,15 +120,20 @@
       width: 100%;
       height: 33.33%;
 
-      .playerPicture,
-      .monsterPicture {
+      .avatarImages {
         width: 70%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        img {
-          height: 75%;
+
+        .images {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 90%;
+          width: 60%;
+          background-color: burlywood;
         }
       }
 
