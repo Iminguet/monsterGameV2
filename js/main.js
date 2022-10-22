@@ -88,9 +88,10 @@ const skills = {
   },
 };
 
-// Extraemos la variable que lleva el método
-// let testeo = '';
-
+// FUCnción creacioón de personaje. Callback con el nombre, callback con el avatar y callback con el método elegido.
+// al hacer click en el botón start, si no hay  ingún undefined..
+// llamamos a la función de nombre crearMetodo. Este nombre es tem`poral.
+// crearMetodo devolverá el personaje ya creado.
 const crearMétodo = (e, skillId) => {
   // De esta forma podmeos recoger el input del usuario (Que será el id del elemento skill sobre el que haga click.
   // Con ese id (string), podremos crear dinámucamente un usuario y asignarle una clase y un método según su elección.
@@ -106,20 +107,20 @@ const crearMétodo = (e, skillId) => {
   // en una variable
   const rabbit = skills[testeo];
 
-  console.log(rabbit);
-
   // Instanciamos el objeto
   // junto con su heredera y damos valores a los parametros de la clase principal.
   let kilo = new rabbit(getAvatar, 'Aureliano');
-
-  console.log(skills[testeo]);
 
   // Activamos el método
   kilo[testeo]();
 
   // Metodo aplicado y funcionando!!
-  console.log(kilo);
-  console.log(kilo.name);
+
+  console.log(`Esto es el nombre: ${kilo.name}`);
+  console.log(`Esto son las pociones: ${kilo.potions}`);
+  console.log(`Esto es el daño mínimo:  ${kilo.minimunDamage}`);
+  console.log(`Esto es la armadura:  ${kilo.armour}`);
+  console.log('************************************************');
   // let monster = new Characters(monsterAvatar, monsterName);
 };
 
@@ -128,3 +129,5 @@ const getAvatar = (id) => document.getElementById(id.id).innerHTML;
 
 // recoge el nombre del input
 const getName = () => document.getElementById('warriorId').value;
+
+// Al pulsar el boton de start, se ha de crear la clase con la herencia
