@@ -126,8 +126,8 @@
             <div class="skillsContainer">
               <div
                 class="skills"
-                onclick="crearMétodo(event,this)"
-                onclick="crearMétodo(event,this)"
+                onclick="CrearMetodo(event,this)"
+                onclick="CrearMetodo(event,this)"
                 id="increaseAttack"
               >
                 <div class="skillsImage">
@@ -140,7 +140,7 @@
               </div>
               <div
                 class="skills"
-                onclick="crearMétodo(event,this)"
+                onclick="CrearMetodo(event,this)"
                 id="increaseDefense"
               >
                 <div class="skillsImage">
@@ -153,7 +153,7 @@
               </div>
               <div
                 class="skills"
-                onclick="crearMétodo(event,this)"
+                onclick="CrearMetodo(event,this)"
                 id="morePotions"
               >
                 <div class="skillsImage">
@@ -163,7 +163,7 @@
               </div>
               <div
                 class="skills"
-                onclick="crearMétodo(event,this)"
+                onclick="CrearMetodo(event,this)"
                 id="increaseHealth"
               >
                 <div class="skillsImage">
@@ -176,7 +176,7 @@
               </div>
               <div
                 class="skills"
-                onclick="crearMétodo(event,this)"
+                onclick="CrearMetodo(event,this)"
                 id="reduceFailure"
               >
                 <div class="skillsImage">
@@ -187,7 +187,7 @@
                 </div>
                 <p>Fallas menos</p>
               </div>
-              <div class="skills" onclick="crearMétodo(event,this)" id="rage">
+              <div class="skills" onclick="CrearMetodo(event,this)" id="rage">
                 <div class="skillsImage">
                   <img src="./img/skills/enrage.svg" alt="Ira" />
                 </div>
@@ -195,7 +195,7 @@
               </div>
               <div
                 class="skills"
-                onclick="crearMétodo(event,this)"
+                onclick="CrearMetodo(event,this)"
                 id="lastStand"
               >
                 <div class="skillsImage">
@@ -205,7 +205,11 @@
               </div>
             </div>
           </div>
-          <div class="toSection" onclick="startGame('mainGame')" id="start">
+          <div
+            class="toSection"
+            onclick="startGame('mainGame', event)"
+            id="start"
+          >
             Start
           </div>
           <div class="toSection" onclick="goSection('mainMenu')">Back</div>
