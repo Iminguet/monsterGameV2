@@ -11,13 +11,6 @@ const goSection = (userClicked) => {
   displayOn.classList.remove('visibilityOFF');
 };
 
-/*
-Función que recoge el personaje, el nombre y la skill
-y los use para crear la clase héroe.
-
-Si una de las variables es undefined, mensaje de error al clickar start
-*/
-
 const startGame = (id) => {
   // validar los datos
   // Nombre ?
@@ -88,46 +81,27 @@ const skills = {
   },
 };
 
-// FUCnción creacioón de personaje. Callback con el nombre, callback con el avatar y callback con el método elegido.
-// al hacer click en el botón start, si no hay  ingún undefined..
-// llamamos a la función de nombre crearMetodo. Este nombre es tem`poral.
-// crearMetodo devolverá el personaje ya creado.
-const crearMétodo = (e, skillId) => {
-  // De esta forma podmeos recoger el input del usuario (Que será el id del elemento skill sobre el que haga click.
-  // Con ese id (string), podremos crear dinámucamente un usuario y asignarle una clase y un método según su elección.
-  // Success
+const CrearMetodo = (skillId) => skillId.id;
+const getAvatar = (id) => document.getElementById(id.id).innerHTML;
+const getName = () => document.getElementById('warriorId').value;
 
-  // con preventDerfault() podemos esperar a que activemos el evento. Antes estaba creadno la clase sin todos los componentes y por eso me daba el error.
-  e.preventDefault();
-
-  // Almacenamos el string del usuario en una variable
-  const testeo = skillId.id;
-
+const characterConstruction = (avatarImage, name, skillSelection) => {
   // extraemos del objeto skills el método que entra por la variable y almacenamos ese método que heredará
   // en una variable
-  const rabbit = skills[testeo];
+
+  const skill = increaseAttack;
 
   // Instanciamos el objeto
   // junto con su heredera y damos valores a los parametros de la clase principal.
-  let kilo = new rabbit(getAvatar, 'Aureliano');
+  let hero = new skill(avatarImage, name);
 
   // Activamos el método
-  kilo[testeo]();
+  hero[skill]();
 
-  // Metodo aplicado y funcionando!!
-
-  console.log(`Esto es el nombre: ${kilo.name}`);
-  console.log(`Esto son las pociones: ${kilo.potions}`);
-  console.log(`Esto es el daño mínimo:  ${kilo.minimunDamage}`);
-  console.log(`Esto es la armadura:  ${kilo.armour}`);
-  console.log('************************************************');
-  // let monster = new Characters(monsterAvatar, monsterName);
+  return hero;
 };
 
-// recoge el avatar que seleccione el usuario
-const getAvatar = (id) => document.getElementById(id.id).innerHTML;
-
-// recoge el nombre del input
-const getName = () => document.getElementById('warriorId').value;
-
-// Al pulsar el boton de start, se ha de crear la clase con la herencia
+characterConstruction(getAvatar, getName, CrearMetodo);
+console.log(characterConstruction.name);
+console.log(characterConstruction.armour);
+console.log(characterConstruction.skills);
