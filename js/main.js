@@ -1,10 +1,11 @@
 'use-strict';
 
 // Función que itercambia la visibilidad de los DIVS.
+
 const goSection = (userClicked) => {
   const displayOn = document.getElementById(userClicked);
   const displayOff = document.getElementsByClassName('size');
-
+  console.log(displayOff);
   for (let i = 0; i < displayOff.length; i++) {
     displayOff[i].classList.add('visibilityOFF');
   }
@@ -81,27 +82,68 @@ const skills = {
   },
 };
 
-const CrearMetodo = (skillId) => skillId.id;
-const getAvatar = (id) => document.getElementById(id.id).innerHTML;
-const getName = () => document.getElementById('warriorId').value;
+/*
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+*/
+// 1. se cear la clase principal. Character
+// 2. creamos la clase (nombreDeLaSkill) que herede de Character.
+// const nuevoHeroe = new nombreDeLaSkill('nombre','avatar')
+// 3. Pero mi skill esta almacenada dentro de un objeto llamado skills.
+// --> const nuevoHeroe = new skills[nombreDeLaSkill]('nombre','avatar')
+/*
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+*/
 
-const characterConstruction = (avatarImage, name, skillSelection) => {
-  // extraemos del objeto skills el método que entra por la variable y almacenamos ese método que heredará
-  // en una variable
+// const CrearMetodo = (skillId) => skillId.id;
+// const getAvatar = (id) => document.getElementById(id.id).innerHTML;
+// const getName = () => document.getElementById('warriorId').value;
 
-  const skill = increaseAttack;
+// const characterConstruction = (avatarImage, name, skillSelection) => {
+//   // extraemos del objeto skills el método que entra por la variable y almacenamos ese método que heredará
+//   // en una variable
 
-  // Instanciamos el objeto
-  // junto con su heredera y damos valores a los parametros de la clase principal.
-  let hero = new skill(avatarImage, name);
+//   const skill = increaseAttack;
 
-  // Activamos el método
-  hero[skill]();
+//   // Instanciamos el objeto
+//   // junto con su heredera y damos valores a los parametros de la clase principal.
+//   let hero = new skill(avatarImage, name);
 
-  return hero;
-};
+//   // Activamos el método
+//   hero[skill]();
 
-characterConstruction(getAvatar, getName, CrearMetodo);
-console.log(characterConstruction.name);
-console.log(characterConstruction.armour);
-console.log(characterConstruction.skills);
+//   return hero;
+// };
+
+// characterConstruction(getAvatar, getName, CrearMetodo);
+// console.log(characterConstruction.name);
+// console.log(characterConstruction.armour);
+// console.log(characterConstruction.skills);
+
+const nuevoHeroe = new skills[increaseAttack](
+  'Foto tuenti',
+  'Antofagasto Panocho'
+);
+
+console.log(nuevoHeroe);
