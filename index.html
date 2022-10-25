@@ -11,19 +11,15 @@
   <body>
     <main>
       <!-- QUITAR LA CLASE VISIVILITY OFF Y DEVOLVERLA A CHARACTER -->
-      <div id="mainMenu" class="size visibilityOFF">
+      <div id="mainMenu" class="size">
         <div class="containerItems">
           <div class="mainItemContainer">
             <img src="./img/logoProv.svg" alt="monster game logo" />
           </div>
-          <div class="toSection" onclick="goSection('character')">
-            Game start
-          </div>
-          <div class="toSection" onclick="goSection('instructions')">
-            Instructions
-          </div>
-          <div class="toSection" onclick="goSection('credits')">Credits</div>
-          <div class="toSection" onclick="goSection('exit')">Exit</div>
+          <div class="toSection" id="goSection-character">Game start</div>
+          <div class="toSection" id="goSection-instructions">Instructions</div>
+          <div class="toSection" id="goSection-credits">Credits</div>
+          <div class="toSection" id="goSection-exit">Exit</div>
         </div>
       </div>
       <div id="exit" class="size visibilityOFF">
@@ -31,7 +27,7 @@
           <div class="mainItemContainer">
             <p>Exit</p>
           </div>
-          <div class="toSection" onclick="goSection('mainMenu')">Back</div>
+          <div class="toSection goSection-mainMenu">Back</div>
         </div>
       </div>
       <div id="credits" class="size visibilityOFF">
@@ -56,7 +52,7 @@
               architecto dolor quibusdam.
             </p>
           </div>
-          <div class="toSection" onclick="goSection('mainMenu')">Back</div>
+          <div class="toSection goSection-mainMenu">Back</div>
         </div>
       </div>
       <div id="instructions" class="size visibilityOFF">
@@ -91,10 +87,10 @@
               <li>Lorem, ipsum dolor.</li>
             </ul>
           </div>
-          <div class="toSection" onclick="goSection('mainMenu')">Back</div>
+          <div class="toSection goSection-mainMenu">Back</div>
         </div>
       </div>
-      <div id="character" class="size">
+      <div id="character" class="size visibilityOFF">
         <div class="containerItems">
           <div class="mainItemContainer">
             <div class="charactersSelection">
@@ -205,10 +201,10 @@
               </div>
             </div>
           </div>
-          <div class="toSection" onclick="startGame('mainGame')" id="start">
+          <div class="toSection" onclick="goSection('mainGame')" id="start">
             Start
           </div>
-          <div class="toSection" onclick="goSection('mainMenu')">Back</div>
+          <div class="toSection goSection-mainMenu">Back</div>
         </div>
       </div>
       <div id="mainGame" class="size visibilityOFF">

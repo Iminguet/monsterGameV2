@@ -1,149 +1,54 @@
 'use-strict';
 
-// Función que itercambia la visibilidad de los DIVS.
-
-const goSection = (userClicked) => {
-  const displayOn = document.getElementById(userClicked);
-  const displayOff = document.getElementsByClassName('size');
-  console.log(displayOff);
-  for (let i = 0; i < displayOff.length; i++) {
-    displayOff[i].classList.add('visibilityOFF');
-  }
-  displayOn.classList.remove('visibilityOFF');
-};
-
-const startGame = (id) => {
-  // validar los datos
-  // Nombre ?
-  // Avatar?
-  // Skill?
-  // Crear clase --> Pasar a pantalla de juego.
-
-  goSection(id);
-};
-
-// Clase principal character, con esta clase se construirá el héroe y los monstruos
-class Characters {
-  constructor(avatar, name) {
-    (this.avatar = avatar),
-      (this.name = name),
-      (this.potions = 2),
-      (this.minimunDamage = 0),
-      (this.armour = 0),
-      (this.life = 100);
-  }
-
-  ligthAttack(enemy) {
-    enemy.life -=
-      parseInt(
-        Math.random() * (this.minimunDamage + 10 - this.minimunDamage) +
-          this.minimunDamage
-      ) - enemy.armour;
-  }
-  normalAttack(enemy) {
-    enemy.life -=
-      parseInt(
-        Math.random() * (this.minimunDamage + 15 - this.minimunDamage) +
-          this.minimunDamage
-      ) - enemy.armour;
-  }
-  strongAttack(enemy) {
-    enemy.life -=
-      parseInt(
-        Math.random() * (this.minimunDamage + 25 - this.minimunDamage) +
-          this.minimunDamage
-      ) - enemy.armour;
-  }
-}
-
-const skills = {
-  increaseAttack: class IncreaseAttack extends Characters {
-    increaseAttack() {
-      this.minimunDamage += 5;
-    }
-  },
-
-  increaseDefense: class IncreaseDefense extends Characters {
-    increaseDefense() {
-      this.armour += 5;
-    }
-  },
-
-  morePotions: class MorePotions extends Characters {
-    morePotions() {
-      this.potions += 1;
-    }
-  },
-
-  increaseHealth: class IncreaseHealth extends Characters {
-    increaseHealth() {
-      this.life += 50;
-    }
-  },
-};
-
 /*
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-*/
-// 1. se cear la clase principal. Character
-// 2. creamos la clase (nombreDeLaSkill) que herede de Character.
-// const nuevoHeroe = new nombreDeLaSkill('nombre','avatar')
-// 3. Pero mi skill esta almacenada dentro de un objeto llamado skills.
-// --> const nuevoHeroe = new skills[nombreDeLaSkill]('nombre','avatar')
-/*
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
+
+
+El boton tiene un ID único--> goTo-mainGame
+podemos obtener el id y hacer split (-) y así obtner el id único con el que cambiaremos visibilityOf
+
+Para solucionar el problema de el botón back. Pouedo crearlo dinámicamente con un append child a una clase del div y darle la idy su comportamiento. De ese modo, solo habrá un botón. Si div padre no tiene visibilityOff, crear el botón back. 
+
+// o añadirlo con .setAttribute('id', 'goTo-mainMenu')
+Así podré sacar todo el JS del HTML. 
+
+Usar addEventListener().
+
 */
 
-// const CrearMetodo = (skillId) => skillId.id;
-// const getAvatar = (id) => document.getElementById(id.id).innerHTML;
-// const getName = () => document.getElementById('warriorId').value;
+// goSection.addEventListener();
 
-// const characterConstruction = (avatarImage, name, skillSelection) => {
-//   // extraemos del objeto skills el método que entra por la variable y almacenamos ese método que heredará
-//   // en una variable
+// const startGame = (id) => {
+//   // validar los datos
+//   // Nombre ?
+//   // Avatar?
+//   // Skill?
+//   // Crear clase --> Pasar a pantalla de juego.
 
-//   const skill = increaseAttack;
+const obtenerId = () => {
+  let botones = Array.from(document.getElementsByClassName('toSection'));
+  botones.forEach((boton) => {
+    boton.addEventListener('click', (e) => {
+      const name = e.target.id.split('-')[1];
+      const displayOn = document.getElementById(name);
+      const displayOff = document.getElementsByClassName('size');
 
-//   // Instanciamos el objeto
-//   // junto con su heredera y damos valores a los parametros de la clase principal.
-//   let hero = new skill(avatarImage, name);
+      for (let i = 0; i < displayOff.length; i++) {
+        displayOff[i].classList.add('visibilityOFF');
+      }
+      displayOn.classList.remove('visibilityOFF');
+      // showButton(displayOn);
+    });
+  });
+};
 
-//   // Activamos el método
-//   hero[skill]();
+obtenerId();
 
-//   return hero;
-// };
-
-// characterConstruction(getAvatar, getName, CrearMetodo);
-// console.log(characterConstruction.name);
-// console.log(characterConstruction.armour);
-// console.log(characterConstruction.skills);
-
-const nuevoHeroe = new skills[increaseAttack](
-  'Foto tuenti',
-  'Antofagasto Panocho'
-);
-
-console.log(nuevoHeroe);
+const showButton = (element) => {
+  console.log();
+  if (element.classList.contains('visibilityOFF')) {
+    const backButton = document.querySelector(
+      `${element} > .goSection-mainMenu`
+    );
+    console.log(backButton);
+  }
+};
