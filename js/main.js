@@ -23,32 +23,31 @@ Usar addEventListener().
 //   // Avatar?
 //   // Skill?
 //   // Crear clase --> Pasar a pantalla de juego.
-
-const obtenerId = () => {
-  let botones = Array.from(document.getElementsByClassName('toSection'));
-  botones.forEach((boton) => {
+let divId = Array.from(document.getElementsByClassName('getId'));
+// usar la misma función para obtener el div del botón y de los divs de la skill y el avatar
+const obtenerId = (botones) => {
+  let name = '';
+  botones.map((boton) => {
+    console.log(boton.id);
     boton.addEventListener('click', (e) => {
-      const name = e.target.id.split('-')[1];
-      const displayOn = document.getElementById(name);
-      const displayOff = document.getElementsByClassName('size');
-
-      for (let i = 0; i < displayOff.length; i++) {
-        displayOff[i].classList.add('visibilityOFF');
-      }
-      displayOn.classList.remove('visibilityOFF');
-      // showButton(displayOn);
+      e.preventDefault();
+      name = e.target.id.split('-')[1];
+      console.log(name);
+      //
+      //
+      //
+      //
+      //
     });
   });
 };
 
-obtenerId();
+// const displayOn = document.getElementById(name);
+// const displayOff = document.getElementsByClassName('size');
+// for (let i = 0; i < displayOff.length; i++) {
+//   displayOff[i].classList.add('visibilityOFF');
+// }
+// displayOn.classList.remove('visibilityOFF');
+// // showButton(displayOn);
 
-const showButton = (element) => {
-  console.log();
-  if (element.classList.contains('visibilityOFF')) {
-    const backButton = document.querySelector(
-      `${element} > .goSection-mainMenu`
-    );
-    console.log(backButton);
-  }
-};
+obtenerId(divId);
