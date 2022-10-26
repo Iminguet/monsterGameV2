@@ -11,15 +11,17 @@
   <body>
     <main>
       <!-- QUITAR LA CLASE VISIVILITY OFF Y DEVOLVERLA A CHARACTER -->
-      <div id="mainMenu" class="size">
+      <div id="mainMenu" class="size visibilityOFF">
         <div class="containerItems">
           <div class="mainItemContainer">
             <img src="./img/logoProv.svg" alt="monster game logo" />
           </div>
-          <div class="toSection" id="goSection-character">Game start</div>
-          <div class="toSection" id="goSection-instructions">Instructions</div>
-          <div class="toSection" id="goSection-credits">Credits</div>
-          <div class="toSection" id="goSection-exit">Exit</div>
+          <div class="getId toSection" id="goSection-character">Game start</div>
+          <div class="getId toSection" id="goSection-instructions">
+            Instructions
+          </div>
+          <div class="getId toSection" id="goSection-credits">Credits</div>
+          <div class="getId toSection" id="goSection-exit">Exit</div>
         </div>
       </div>
       <div id="exit" class="size visibilityOFF">
@@ -90,25 +92,25 @@
           <div class="toSection goSection-mainMenu">Back</div>
         </div>
       </div>
-      <div id="character" class="size visibilityOFF">
+      <div id="character" class="size">
         <div class="containerItems">
           <div class="mainItemContainer">
             <div class="charactersSelection">
               <h1>Choose your warrior</h1>
               <div class="characterContainer">
-                <div class="character" onclick="getAvatar(this)" id="barbarian">
+                <div class="getId character" id="player-barbarian">
                   <img
                     src="./img/characters/barbarian-stand.svg"
                     alt="Barbarian standart"
                   />
                 </div>
-                <div class="character" onclick="getAvatar(this)" id="womanElf">
+                <div class="getId character" id="player-womanElf">
                   <img
                     src="./img/characters/woman-elf-stand.svg"
                     alt="woman elf standart"
                   />
                 </div>
-                <div class="character" onclick="getAvatar(this)" id="barbute">
+                <div class="getId character" id="player-barbute">
                   <img
                     src="./img/characters/barbute-stand.svg"
                     alt="barbute standart"
@@ -120,12 +122,7 @@
             </div>
             <h1>Select one skill</h1>
             <div class="skillsContainer">
-              <div
-                class="skills"
-                onclick="crearMétodo(event,this)"
-                onclick="crearMétodo(event,this)"
-                id="increaseAttack"
-              >
+              <div class="getId skills" id="skill-increaseAttack">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/bloody-sword.svg"
@@ -134,11 +131,7 @@
                 </div>
                 <p>Aumenta ataque</p>
               </div>
-              <div
-                class="skills"
-                onclick="crearMétodo(event,this)"
-                id="increaseDefense"
-              >
+              <div class="getId skills" id="skill-increaseDefense">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/attached-shield.svg"
@@ -147,21 +140,13 @@
                 </div>
                 <p>Increase defense</p>
               </div>
-              <div
-                class="skills"
-                onclick="crearMétodo(event,this)"
-                id="morePotions"
-              >
+              <div class="getId skills" id="skill-morePotions">
                 <div class="skillsImage">
                   <img src="./img/skills/heart-bottle.svg" alt="Más pócimas" />
                 </div>
                 <p>Aumenta las pocimas que puedes llevar</p>
               </div>
-              <div
-                class="skills"
-                onclick="crearMétodo(event,this)"
-                id="increaseHealth"
-              >
+              <div class="getId skills" id="skill-increaseHealth">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/heart-plus.svg"
@@ -170,11 +155,7 @@
                 </div>
                 <p>Aumento de salud</p>
               </div>
-              <div
-                class="skills"
-                onclick="crearMétodo(event,this)"
-                id="reduceFailure"
-              >
+              <div class="getId skills" id="skill-reduceFailure">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/third-eye.svg"
@@ -183,17 +164,13 @@
                 </div>
                 <p>Fallas menos</p>
               </div>
-              <div class="skills" onclick="crearMétodo(event,this)" id="rage">
+              <div class="getId skills" id="skill-rage">
                 <div class="skillsImage">
                   <img src="./img/skills/enrage.svg" alt="Ira" />
                 </div>
                 <p>Aumenta el ataque al bajar de cierta salud</p>
               </div>
-              <div
-                class="skills"
-                onclick="crearMétodo(event,this)"
-                id="lastStand"
-              >
+              <div class="getId skills" id="skill-lastStand">
                 <div class="skillsImage">
                   <img src="./img/skills/half-dead.svg" alt="Last stand" />
                 </div>
@@ -201,9 +178,7 @@
               </div>
             </div>
           </div>
-          <div class="toSection" onclick="goSection('mainGame')" id="start">
-            Start
-          </div>
+          <div class="toSection" id="start">Start</div>
           <div class="toSection goSection-mainMenu">Back</div>
         </div>
       </div>
@@ -274,13 +249,7 @@
             <div class="showActionsContainer">
               <div id="showActions"></div>
             </div>
-            <div
-              class="toSection infoButton"
-              onclick="goSection('mainMenu')"
-              id="mainGameBackButton"
-            >
-              Back
-            </div>
+            <div class="toSection infoButton" id="mainGameBackButton">Back</div>
           </div>
           <div class="infoContainer">
             <div class="monsterInfo cardSize">
