@@ -540,12 +540,11 @@
       -ms-flex-align: center;
           align-items: center;
   width: 60%;
-  height: 60%;
-  border: 2px solid blue;
+  height: auto;
 }
 #character .containerItems .mainItemContainer .charactersSelection .characterContainer .character {
-  height: 100%;
   width: auto;
+  height: auto;
 }
 #character .containerItems .mainItemContainer .charactersSelection .characterContainer .character img {
   width: 100%;
@@ -583,6 +582,8 @@
   width: 13%;
 }
 #character .containerItems .mainItemContainer .skillsContainer .skills .skillsImage {
+  position: relative;
+  z-index: 1;
   height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -595,6 +596,7 @@
           align-items: center;
 }
 #character .containerItems .mainItemContainer .skillsContainer .skills .skillsImage img {
+  z-index: 0;
   width: 100%;
   height: auto;
 }
@@ -610,10 +612,4 @@
 
 .visibilityOFF {
   display: none;
-}
-
-.character {
-  width: 3em;
-  height: 3em;
-  background-color: aquamarine;
 }

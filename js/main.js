@@ -25,29 +25,40 @@ Usar addEventListener().
 //   // Crear clase --> Pasar a pantalla de juego.
 let divId = Array.from(document.getElementsByClassName('getId'));
 // usar la misma función para obtener el div del botón y de los divs de la skill y el avatar
-const obtenerId = (botones) => {
-  let name = '';
-  botones.map((boton) => {
-    console.log(boton.id);
-    boton.addEventListener('click', (e) => {
+
+const obtenerId = (divs) => {
+  divs.forEach((div) => {
+    div.addEventListener('click', (e) => {
       e.preventDefault();
-      name = e.target.id.split('-')[1];
+      console.log(e.target);
+      const name = e.target.id.split('-')[1];
       console.log(name);
-      //
-      //
-      //
-      //
-      //
     });
   });
+
+  // botones.map((boton) => {
+  //   console.log(boton.id);
+  //   boton.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     name = e.target.id.split('-')[1];
+  //     console.log(name);
+  //   });
+  // });
 };
 
-// const displayOn = document.getElementById(name);
-// const displayOff = document.getElementsByClassName('size');
-// for (let i = 0; i < displayOff.length; i++) {
-//   displayOff[i].classList.add('visibilityOFF');
-// }
-// displayOn.classList.remove('visibilityOFF');
-// // showButton(displayOn);
-
 obtenerId(divId);
+
+function anagrams(list) {
+  const anagramsMap = new Map();
+
+  list.forEach((item) => {
+    const letters = [];
+    for (let letter of item.toLowerCase()) {
+      letters.push(letter);
+    }
+    const ordered = letters.sort();
+    anagramsMap.set(ordered.join(''), item);
+  });
+
+  return Array.from(anagramsMap.values());
+}
