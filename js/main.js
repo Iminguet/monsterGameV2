@@ -1,64 +1,75 @@
 'use-strict';
 
-/*
+let avatars = Array.from(document.getElementsByClassName('getAvatar'));
+let identifies = Array.from(document.getElementsByClassName('getId'));
+let buttons = Array.from(document.getElementsByClassName('toSection'));
 
-
-El boton tiene un ID único--> goTo-mainGame
-podemos obtener el id y hacer split (-) y así obtner el id único con el que cambiaremos visibilityOf
-
-Para solucionar el problema de el botón back. Pouedo crearlo dinámicamente con un append child a una clase del div y darle la idy su comportamiento. De ese modo, solo habrá un botón. Si div padre no tiene visibilityOff, crear el botón back. 
-
-// o añadirlo con .setAttribute('id', 'goTo-mainMenu')
-Así podré sacar todo el JS del HTML. 
-
-Usar addEventListener().
-
-*/
-
-// goSection.addEventListener();
-
-// const startGame = (id) => {
-//   // validar los datos
-//   // Nombre ?
-//   // Avatar?
-//   // Skill?
-//   // Crear clase --> Pasar a pantalla de juego.
-let divId = Array.from(document.getElementsByClassName('getId'));
-// usar la misma función para obtener el div del botón y de los divs de la skill y el avatar
-
-const obtenerId = (divs) => {
-  divs.forEach((div) => {
-    div.addEventListener('click', (e) => {
-      e.preventDefault();
-      console.log(e.target);
-      const name = e.target.id.split('-')[1];
-      console.log(name);
-    });
-  });
-
-  // botones.map((boton) => {
-  //   console.log(boton.id);
-  //   boton.addEventListener('click', (e) => {
-  //     e.preventDefault();
-  //     name = e.target.id.split('-')[1];
-  //     console.log(name);
-  //   });
-  // });
+let playerSelections = {
+  name: '',
+  avatar: '',
+  skill: '',
 };
 
-obtenerId(divId);
+// conseguimos el avatar
+const createAvatar = (avatarsArray) => {
+  const getAvatar = (e) => {
+    e.preventDefault();
+    playerSelections.avatar = e.currentTarget;
+    console.log(playerSelections.avatar);
+  };
 
-function anagrams(list) {
-  const anagramsMap = new Map();
+  for (const avatar of avatarsArray) {
+    avatar.addEventListener('click', getAvatar);
+  }
+};
 
-  list.forEach((item) => {
-    const letters = [];
-    for (let letter of item.toLowerCase()) {
-      letters.push(letter);
+// Conseguimos el id
+const createId = (identifiesArray) => {
+  const getId = (e) => {
+    e.preventDefault();
+    playerSelections.skill = e.currentTarget.id;
+    console.log(playerSelections.skill);
+  };
+
+  for (const identity of identifiesArray) {
+    identity.addEventListener('click', getId);
+  }
+};
+
+// cambiamos la vista de las páginas
+const changeView = (buttonsArray) => {
+  const goSection = (e) => {
+    e.preventDefault();
+    const entireId = e.currentTarget.id;
+    const currentId = entireId.split('-')[1];
+    const displayOn = document.getElementById(currentId);
+    const displayOff = document.getElementsByClassName('size');
+
+    console.log(displayOff);
+    for (let i = 0; i < displayOff.length; i++) {
+      displayOff[i].classList.add('visibilityOFF');
     }
-    const ordered = letters.sort();
-    anagramsMap.set(ordered.join(''), item);
-  });
+    displayOn.classList.remove('visibilityOFF');
+  };
 
-  return Array.from(anagramsMap.values());
-}
+  for (const button of buttonsArray) {
+    button.addEventListener('click', goSection);
+  }
+};
+
+//Vamos a crear la clase
+
+const showObj = document.getElementById('muestraObjeto');
+const name = document.getElementById('warriorId').value;
+
+playerSelections.name = name;
+
+showObj.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  console.log(playerSelections);
+});
+
+createAvatar(avatars);
+createId(identifies);
+changeView(buttons);

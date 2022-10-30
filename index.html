@@ -16,12 +16,10 @@
           <div class="mainItemContainer">
             <img src="./img/logoProv.svg" alt="monster game logo" />
           </div>
-          <div class="getId toSection" id="goSection-character">Game start</div>
-          <div class="getId toSection" id="goSection-instructions">
-            Instructions
-          </div>
-          <div class="getId toSection" id="goSection-credits">Credits</div>
-          <div class="getId toSection" id="goSection-exit">Exit</div>
+          <div class="toSection" id="goSection-character">Game start</div>
+          <div class="toSection" id="goSection-instructions">Instructions</div>
+          <div class="toSection" id="goSection-credits">Credits</div>
+          <div class="toSection" id="goSection-exit">Exit</div>
         </div>
       </div>
       <div id="exit" class="size visibilityOFF">
@@ -29,7 +27,7 @@
           <div class="mainItemContainer">
             <p>Exit</p>
           </div>
-          <div class="toSection goSection-mainMenu">Back</div>
+          <div class="toSection" id="exitBackButton-mainMenu">Back</div>
         </div>
       </div>
       <div id="credits" class="size visibilityOFF">
@@ -54,7 +52,7 @@
               architecto dolor quibusdam.
             </p>
           </div>
-          <div class="toSection goSection-mainMenu">Back</div>
+          <div class="toSection" id="creditsBackButton-mainMenu">Back</div>
         </div>
       </div>
       <div id="instructions" class="size visibilityOFF">
@@ -89,7 +87,7 @@
               <li>Lorem, ipsum dolor.</li>
             </ul>
           </div>
-          <div class="toSection goSection-mainMenu">Back</div>
+          <div class="toSection" id="instructionsBackButton-mainMenu">Back</div>
         </div>
       </div>
       <div id="character" class="size">
@@ -98,11 +96,11 @@
             <div class="charactersSelection">
               <h1>Choose your warrior</h1>
               <div class="characterContainer">
-                <div class="getId character">
+                <div class="character">
                   <img
                     src="./img/characters/barbarian-stand.svg"
                     alt="Barbarian standart"
-                    class="getId"
+                    class="getAvatar"
                     id="player-barbarian"
                   />
                 </div>
@@ -110,7 +108,7 @@
                   <img
                     src="./img/characters/woman-elf-stand.svg"
                     alt="woman elf standart"
-                    class="getId"
+                    class="getAvatar"
                     id="player-womanElf"
                   />
                 </div>
@@ -118,7 +116,7 @@
                   <img
                     src="./img/characters/barbute-stand.svg"
                     alt="barbute standart"
-                    class="getId"
+                    class="getAvatar"
                     id="player-barbute"
                   />
                 </div>
@@ -128,64 +126,88 @@
             </div>
             <h1>Select one skill</h1>
             <div class="skillsContainer">
-              <div class="getId skills" id="skill-increaseAttack">
+              <div class="skills">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/bloody-sword.svg"
                     alt="Increase attack"
+                    class="getId"
+                    id="increaseAttack"
                   />
                 </div>
                 <p>Aumenta ataque</p>
               </div>
-              <div class="getId skills" id="skill-increaseDefense">
+              <div class="skills">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/attached-shield.svg"
                     alt="Increase defense"
+                    class="getId"
+                    id="increaseDefense"
                   />
                 </div>
                 <p>Increase defense</p>
               </div>
-              <div class="getId skills" id="skill-morePotions">
+              <div class="skills">
                 <div class="skillsImage">
-                  <img src="./img/skills/heart-bottle.svg" alt="Más pócimas" />
+                  <img
+                    src="./img/skills/heart-bottle.svg"
+                    alt="Más pócimas"
+                    class="getId"
+                    id="morePotions"
+                  />
                 </div>
                 <p>Aumenta las pocimas que puedes llevar</p>
               </div>
-              <div class="getId skills" id="skill-increaseHealth">
+              <div class="skills">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/heart-plus.svg"
                     alt="Aumenta la salud"
+                    class="getId"
+                    id="increaseHealth"
                   />
                 </div>
                 <p>Aumento de salud</p>
               </div>
-              <div class="getId skills" id="skill-reduceFailure">
+              <div class="skills">
                 <div class="skillsImage">
                   <img
                     src="./img/skills/third-eye.svg"
                     alt="Menos posibilidad de fallo"
+                    class="getId"
+                    id="reduceFailure"
                   />
                 </div>
                 <p>Fallas menos</p>
               </div>
-              <div class="getId skills" id="skill-rage">
+              <div class="skills">
                 <div class="skillsImage">
-                  <img src="./img/skills/enrage.svg" alt="Ira" />
+                  <img
+                    src="./img/skills/enrage.svg"
+                    alt="Ira"
+                    class="getId"
+                    id="rage"
+                  />
                 </div>
                 <p>Aumenta el ataque al bajar de cierta salud</p>
               </div>
-              <div class="getId skills" id="skill-lastStand">
+              <div class="skills">
                 <div class="skillsImage">
-                  <img src="./img/skills/half-dead.svg" alt="Last stand" />
+                  <img
+                    src="./img/skills/half-dead.svg"
+                    alt="Last stand"
+                    class="getId"
+                    id="lastStand"
+                  />
                 </div>
                 <p>Antes de morir te deja atacar, si ganas, mas salud</p>
               </div>
             </div>
           </div>
-          <div class="toSection" id="start">Start</div>
-          <div class="toSection goSection-mainMenu">Back</div>
+          <!-- <div class="toSection" id="characterStartkButton-mainGame">Start</div> -->
+          <div class="button" id="muestraObjeto">Start</div>
+          <div class="toSection" id="characterBackButton-mainMenu">Back</div>
         </div>
       </div>
       <div id="mainGame" class="size visibilityOFF">
@@ -255,7 +277,9 @@
             <div class="showActionsContainer">
               <div id="showActions"></div>
             </div>
-            <div class="toSection infoButton" id="mainGameBackButton">Back</div>
+            <div class="toSection infoButton" id="mainGameBackButton-mainMenu">
+              Back
+            </div>
           </div>
           <div class="infoContainer">
             <div class="monsterInfo cardSize">

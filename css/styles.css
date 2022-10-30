@@ -48,7 +48,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.size .containerItems .toSection {
+.size .containerItems .toSection,
+.size .containerItems .button {
   padding: 1em;
   width: 10em;
   margin: 0.5em;
@@ -551,7 +552,8 @@
   height: 100%;
 }
 #character .containerItems .mainItemContainer .skillsContainer {
-  background-color: red;
+  position: relative;
+  z-index: 1;
   height: 60%;
   width: 100%;
   display: -webkit-box;
@@ -564,6 +566,8 @@
           align-items: center;
 }
 #character .containerItems .mainItemContainer .skillsContainer .skills {
+  background-color: red;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,8 +586,7 @@
   width: 13%;
 }
 #character .containerItems .mainItemContainer .skillsContainer .skills .skillsImage {
-  position: relative;
-  z-index: 1;
+  z-index: 2;
   height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -596,13 +599,13 @@
           align-items: center;
 }
 #character .containerItems .mainItemContainer .skillsContainer .skills .skillsImage img {
-  z-index: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 #character .containerItems .mainItemContainer .skillsContainer .skills p {
   height: 30%;
   width: 95%;
+  background-color: blue;
   text-align: center;
 }
 
